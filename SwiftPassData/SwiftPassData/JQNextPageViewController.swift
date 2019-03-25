@@ -14,15 +14,22 @@ class JQNextPageViewController: UIViewController {
     
     @IBOutlet weak var nextPageText: UILabel!
     
+    
+    //1. Property
+    var textInfo: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //1. Property
+        nextPageText.text = textInfo
     }
     
 
     @IBAction func backBtnAction(_ sender: Any) {
+        
         navigationController?.popViewController(animated: true)
+        
     }
 
 

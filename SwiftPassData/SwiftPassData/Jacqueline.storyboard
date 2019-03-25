@@ -34,7 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XaY-0x-3ee" kind="show" identifier="nextPageSegue" id="kbQ-nD-fAu"/>
+                                    <action selector="nextPage:" destination="CFo-oy-RIM" eventType="touchUpInside" id="sa4-fr-392"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-zF-aNc">
@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="firstTextField" destination="jnN-zF-aNc" id="H4b-eh-Qk1"/>
                         <outlet property="fitstPageText" destination="Z5f-Bk-yLi" id="VKR-DF-m5W"/>
+                        <segue destination="XaY-0x-3ee" kind="show" identifier="nextPageSegue" id="OG8-DU-JGY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUF-E9-zE7" userLabel="First Responder" sceneMemberID="firstResponder"/>

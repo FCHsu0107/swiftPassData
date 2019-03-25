@@ -8,19 +8,41 @@
 
 import UIKit
 
+//KVO
+class TextInfo: NSObject {
+    @objc dynamic var textInfo = String()
+}
+
+//delegate
+
 class JacquelineViewController: UIViewController {
 
     @IBOutlet weak var firstTextField: UITextField!
     
     @IBOutlet weak var fitstPageText: UILabel!
     
+    //1. Property
+    var nextPageTextInfo: String?
+
+    //KVO
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    //1. Property
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "nextPageSegue" {
+            if let vc = segue.destination as? JQNextPageViewController {
+                vc.textInfo = firstTextField.text
+            }
+        }
+    }
     
+    @IBAction func nextPage(_ sender: Any) {
+    //1. Property
+       self.performSegue(withIdentifier: "nextPageSegue", sender: nil)
+
+    }
 }
