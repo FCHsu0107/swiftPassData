@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B93030F122489CFC001E6BEC /* Jacqueline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93030F022489CFC001E6BEC /* Jacqueline.storyboard */; };
+		B93030F322489D18001E6BEC /* JacquelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93030F222489D18001E6BEC /* JacquelineViewController.swift */; };
+		B93030F522489D65001E6BEC /* JQNextPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93030F422489D65001E6BEC /* JQNextPageViewController.swift */; };
 		C33E317522489A12002931DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E317422489A12002931DB /* AppDelegate.swift */; };
 		C33E317722489A12002931DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E317622489A12002931DB /* ViewController.swift */; };
 		C33E317A22489A12002931DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33E317822489A12002931DB /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B93030F022489CFC001E6BEC /* Jacqueline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Jacqueline.storyboard; sourceTree = "<group>"; };
+		B93030F222489D18001E6BEC /* JacquelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JacquelineViewController.swift; sourceTree = "<group>"; };
+		B93030F422489D65001E6BEC /* JQNextPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQNextPageViewController.swift; sourceTree = "<group>"; };
 		C33E317122489A12002931DB /* SwiftPassData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPassData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33E317422489A12002931DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C33E317622489A12002931DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				C33E317B22489A13002931DB /* Assets.xcassets */,
 				C33E317D22489A13002931DB /* LaunchScreen.storyboard */,
 				C33E318022489A13002931DB /* Info.plist */,
+				B93030F022489CFC001E6BEC /* Jacqueline.storyboard */,
+				B93030F222489D18001E6BEC /* JacquelineViewController.swift */,
+				B93030F422489D65001E6BEC /* JQNextPageViewController.swift */,
 			);
 			path = SwiftPassData;
 			sourceTree = "<group>";
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33E317F22489A13002931DB /* LaunchScreen.storyboard in Resources */,
+				B93030F122489CFC001E6BEC /* Jacqueline.storyboard in Resources */,
 				C33E317C22489A13002931DB /* Assets.xcassets in Resources */,
 				C33E317A22489A12002931DB /* Main.storyboard in Resources */,
 			);
@@ -135,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93030F322489D18001E6BEC /* JacquelineViewController.swift in Sources */,
 				C33E317722489A12002931DB /* ViewController.swift in Sources */,
 				C33E317522489A12002931DB /* AppDelegate.swift in Sources */,
+				B93030F522489D65001E6BEC /* JQNextPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

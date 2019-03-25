@@ -10,6 +10,11 @@ import UIKit
 
 class JacquelineViewController: UIViewController {
 
+    @IBOutlet weak var firstTextField: UITextField!
+    
+    @IBOutlet weak var fitstPageText: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +22,5 @@ class JacquelineViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
