@@ -61,7 +61,7 @@
                     <navigationItem key="navigationItem" id="oFo-iO-fem"/>
                     <connections>
                         <outlet property="firstTextField" destination="jnN-zF-aNc" id="H4b-eh-Qk1"/>
-                        <outlet property="fitstPageText" destination="Z5f-Bk-yLi" id="VKR-DF-m5W"/>
+                        <outlet property="pageInfoText" destination="Z5f-Bk-yLi" id="G82-O8-WrT"/>
                         <segue destination="XaY-0x-3ee" kind="show" identifier="nextPageSegue" id="OG8-DU-JGY"/>
                     </connections>
                 </viewController>
@@ -119,8 +119,8 @@
                         <viewLayoutGuide key="safeArea" id="4g0-nK-zhS"/>
                     </view>
                     <connections>
-                        <outlet property="nextPageText" destination="HBh-nH-dXo" id="tYi-ZX-GAv"/>
                         <outlet property="nextPageTextField" destination="m6F-7b-cj2" id="vZJ-Ye-Ldj"/>
+                        <outlet property="pageInfoText" destination="HBh-nH-dXo" id="tYi-ZX-GAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JuR-ym-KF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
