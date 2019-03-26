@@ -148,17 +148,18 @@ class ViewController: UIViewController, PassDataDelegate {
             return
         }
         secondVC.loadViewIfNeeded()
-        
+        secondVC.firstVC = self
         // property:
         
 //        secondVC.pageSecondLabel.text = pageOneTextField.text
         
         // closure:
        
-//        closurePassText { (text) in
-//            secondVC.pageSecondLabel.text = text
-//        }
+        secondVC.closureFromVC1 = {
+            secondVC.pageSecondLabel.text = self.pageOneTextField.text
+        }
         
+        secondVC.closureFromVC1?()
         // delegate:
         
 //        self.delegate = secondVC
@@ -170,12 +171,6 @@ class ViewController: UIViewController, PassDataDelegate {
         
     }
     
-    private func closurePassText(_ handler: (String) -> Void) {
-        
-        let text = pageOneTextField.text ?? ""
-        
-        handler(text)
-    }
     
 }
 

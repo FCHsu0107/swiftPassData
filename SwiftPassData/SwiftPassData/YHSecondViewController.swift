@@ -33,7 +33,9 @@ class YHSecondViewController: UIViewController, PassDataDelegateSecond {
     var text: String?
     var contentKVO: YHText?
     var observation: NSKeyValueObservation?
-
+    var firstVC: ViewController?
+    var closureFromVC1: (() -> Void)?
+    
     
     @IBAction func pageSecondBtnPressed(_ sender: UIButton) {
         
@@ -51,6 +53,8 @@ class YHSecondViewController: UIViewController, PassDataDelegateSecond {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+
     }
     
     func sendMessageToPageOne (text: String){
