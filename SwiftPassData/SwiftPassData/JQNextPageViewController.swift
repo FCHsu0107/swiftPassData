@@ -28,6 +28,9 @@ class JQNextPageViewController: UIViewController {
     //vc2 to vc1 KVO
     @objc dynamic var secondPageTitle = String()
     
+    //vc2 to vc1 closure
+    var onSave: ((_ data: String ) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +53,9 @@ class JQNextPageViewController: UIViewController {
         
         //vc2 to vc1 KVO
 //        secondPageTitle = textInfo
+        
+        //vc2 to vc1 Closure
+        onSave?(textInfo)
         
         //popView
         navigationController?.popViewController(animated: true)

@@ -56,6 +56,9 @@ class JacquelineViewController: UIViewController
             
             //vc1 to vc2 KVO
             self.addObserver(vc, forKeyPath: "firstPageTitle", options: .new, context: nil)
+            
+            //vc2 to vc1 Closure
+            vc.onSave = onSave
         }
 
     }
@@ -76,6 +79,10 @@ class JacquelineViewController: UIViewController
 //        NotificationCenter.default.post(name: Notification.Name("firstPageInfo"), object: nil, userInfo: ["text": text])
 //    }
     
+    //vc2 to vc1 Closure
+    func onSave(_ data: String ) -> () {
+        pageInfoText.text = data
+    }
     
     @IBAction func nextPage(_ sender: Any) {
         self.performSegue(withIdentifier: "nextPageSegue", sender: nil)
