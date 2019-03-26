@@ -12,6 +12,7 @@
 		C33E317A22489A12002931DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33E317822489A12002931DB /* Main.storyboard */; };
 		C33E317C22489A13002931DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C33E317B22489A13002931DB /* Assets.xcassets */; };
 		C33E317F22489A13002931DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33E317D22489A13002931DB /* LaunchScreen.storyboard */; };
+		C33E318722489CA6002931DB /* YHSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E318622489CA6002931DB /* YHSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C33E317B22489A13002931DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C33E317E22489A13002931DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C33E318022489A13002931DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33E318622489CA6002931DB /* YHSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C33E317422489A12002931DB /* AppDelegate.swift */,
 				C33E317622489A12002931DB /* ViewController.swift */,
+				C33E318622489CA6002931DB /* YHSecondViewController.swift */,
 				C33E317822489A12002931DB /* Main.storyboard */,
 				C33E317B22489A13002931DB /* Assets.xcassets */,
 				C33E317D22489A13002931DB /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33E317722489A12002931DB /* ViewController.swift in Sources */,
+				C33E318722489CA6002931DB /* YHSecondViewController.swift in Sources */,
 				C33E317522489A12002931DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
