@@ -8,27 +8,6 @@
 
 import UIKit
 
-//vc1 to vc2 KVO
-class FirstTextInfo: NSObject {
-    @objc dynamic var textInfo = String()
-    
-    override init() {
-        self.textInfo = " "
-        super.init()
-    }
-}
-
-//vc2 to vc1 KVO
-class SecondTextInfo: NSObject {
-    @objc dynamic var textInfo = String()
-    
-    override init() {
-        self.textInfo = " "
-        super.init()
-    }
-}
-
-
 class JacquelineViewController: UIViewController
 // ,secondPageTextDelegate
 {
@@ -40,10 +19,7 @@ class JacquelineViewController: UIViewController
     var secondText: String?
     
     //vc1 to vc2 KVO
-    @objc var firstTextInfo = FirstTextInfo()
-    
-    //vc2 to vc1 KVO
-    @objc var secondTextInfo = SecondTextInfo()
+    @objc dynamic var firstPageTitle = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +27,6 @@ class JacquelineViewController: UIViewController
         //vc2 to vc1 notification
 //        NotificationCenter.default.addObserver(self, selector: #selector(getTextInfo(data:)), name: NSNotification.Name("secondPageInfo") , object: nil)
         
-        //vc2 to vc1 KVO
-        addObserver(self, forKeyPath: #keyPath(secondTextInfo.textInfo), options: .new, context: nil)
     
     }
     
@@ -76,6 +50,12 @@ class JacquelineViewController: UIViewController
             
             //vc1 to vc2 notificaiton
 //            NotificationCenter.default.addObserver(vc, selector: #selector(getTextInfo(data:)), name: NSNotification.Name(rawValue: "firstPageInfo"), object: nil)
+            
+            //vc2 to vc1 KVO
+            vc.addObserver(self, forKeyPath: "secondPageTitle", options: .new, context: nil)
+            
+            //vc1 to vc2 KVO
+            self.addObserver(vc, forKeyPath: "firstPageTitle", options: .new, context: nil)
         }
 
     }
@@ -101,14 +81,16 @@ class JacquelineViewController: UIViewController
         self.performSegue(withIdentifier: "nextPageSegue", sender: nil)
         
         //vc1 to vc2 notification
-//        guard let textInfo = firstTextField.text else { return }
+        guard let textInfo = firstTextField.text else { return }
 //        notificationFirstPage(text: textInfo)
         
+        //vc1 to vc2 KVO
+        firstPageTitle = textInfo
     }
     
     //vc2 to vc1 KVO
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == #keyPath(secondTextInfo.textInfo) {
+        if keyPath == "secondPageTitle" {
             guard let updateText = change?[.newKey] as? String else { return }
             pageInfoText.text = updateText 
         }

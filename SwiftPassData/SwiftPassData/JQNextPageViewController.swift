@@ -26,7 +26,7 @@ class JQNextPageViewController: UIViewController{
     var textInfo: String?
     
     //vc2 to vc1 KVO
-    @objc var secondTextInfo = SecondTextInfo()
+    @objc dynamic var secondPageTitle = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,11 @@ class JQNextPageViewController: UIViewController{
         //vc1 to vc2 Property
 //        nextPageText.text = textInfo
         
-        
     }
     
 
     @IBAction func backBtnAction(_ sender: Any) {
 
-        
         guard let textInfo = nextPageTextField.text else { return }
         print(textInfo)
         
@@ -51,8 +49,8 @@ class JQNextPageViewController: UIViewController{
 //        notificationSecondPage(text: textInfo)
         
         //vc2 to vc1 KVO
-        secondTextInfo.textInfo = textInfo
-        
+        secondPageTitle = textInfo
+        print(secondPageTitle)
         //
         navigationController?.popViewController(animated: true)
     }
@@ -66,5 +64,10 @@ class JQNextPageViewController: UIViewController{
 //    @objc func getTextInfo(data: Notification) {
 //        pageInfoText.text = data.userInfo?["text"] as? String
 //    }
-    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "firstPageTitle" {
+            guard let updateText = change?[.newKey] as? String else { return }
+            pageInfoText.text = updateText
+        }
+    }
 }
