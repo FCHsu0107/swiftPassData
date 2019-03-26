@@ -13,7 +13,7 @@ protocol secondPageTextDelegate: AnyObject {
     func getSecondText(_ vc: JQNextPageViewController, didGet value: String)
 }
 
-class JQNextPageViewController: UIViewController{
+class JQNextPageViewController: UIViewController {
     
     @IBOutlet weak var nextPageTextField: UITextField!
     
@@ -49,9 +49,9 @@ class JQNextPageViewController: UIViewController{
 //        notificationSecondPage(text: textInfo)
         
         //vc2 to vc1 KVO
-        secondPageTitle = textInfo
-        print(secondPageTitle)
-        //
+//        secondPageTitle = textInfo
+        
+        //popView
         navigationController?.popViewController(animated: true)
     }
 
@@ -64,10 +64,17 @@ class JQNextPageViewController: UIViewController{
 //    @objc func getTextInfo(data: Notification) {
 //        pageInfoText.text = data.userInfo?["text"] as? String
 //    }
+    
+    //vc1 to vc2 KVO
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "firstPageTitle" {
             guard let updateText = change?[.newKey] as? String else { return }
             pageInfoText.text = updateText
+            
+            guard let vc = object as? JacquelineViewController else {return}
+            vc.removeObserver(self, forKeyPath: "firstPageTitle")
         }
     }
+
+
 }
